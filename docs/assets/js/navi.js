@@ -9,6 +9,7 @@ pageDict = {
 	"about": "О проекте",
 	"contacts": "Контакты",
 	"description": "Описание",
+	"navi-page": "Оглавление и поиск"
 
 }
 
@@ -26,7 +27,7 @@ keyDay = "";
 
 function namePage() {
 
-	stringTabTitle = 'a374.ru';
+	stringTabTitle = 'AZDOC';
 	str = document.URL.split('/').pop().split('.')[0];
 	console.log("str = ", str)
 	if (str != "") {
@@ -140,7 +141,7 @@ function naviPage() {
 
 	console.log(naviDiv);
 
-	document.getElementById('navi').innerHTML = naviDiv;
+	document.getElementById('navi-page').innerHTML = naviDiv;
 }
 if (keyDay == "navi-page") {
 	naviPage()
