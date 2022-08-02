@@ -1,9 +1,9 @@
 <div class="navi"><nav id="navi"><!-- js --></nav></div>
 
-<!--  СКРИПТ ПОИСКА GOOGLE SEARCH CONSOL -->
+<!--  СКРИПТ ПОИСКА GOOGLE SEARCH CONSOL https://cse.google.com/cse -->
 <script async src="https://cse.google.com/cse.js?cx=94cd8d759d1ed4851">
 </script>
-<div class="gcse-searchresults-only"></div>
+<div class="gcse-search"></div>
 
 ## Страницы документации
 
