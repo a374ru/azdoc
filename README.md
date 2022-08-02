@@ -1,3 +1,3 @@
 # Проект простого документирования
 
-Javascript + Markdown + GitHub Pages
+Javascript + Markdown + GitHub Pages и другое…

@@ -71,7 +71,7 @@ function toNavi() {
 
 	for (const key in pageDict) {
 
-		if (Object.hasOwnProperty.call(pageDict, key) && key != keyDay && counter % getRandomIntInclusive(5, 1) && counter < 10 && key != 'dobro-day') {
+		if (Object.hasOwnProperty.call(pageDict, key) && key != keyDay && counter % getRandomIntInclusive(5, 1) && counter < 10 && key != 'navi-page') {
 			const element = pageDict[key];
 			htmlString += `<div class="navi-item"><a href="${key}">${element}</a> </div>`;
 		}
