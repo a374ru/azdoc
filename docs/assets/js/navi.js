@@ -8,7 +8,7 @@ pageDict = {
 	"az": "Азъ",
 	"about": "О проекте",
 	"contacts": "Контакты",
-	"description": "Описание",
+	// "description": "Описание",
 	"navi-page": "Оглавление и поиск"
 
 }
