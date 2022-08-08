@@ -1,4 +1,4 @@
-<span id="cross-orthodox">![Cross Orthodox](/000.png)</span>
+<span id="cross-orthodox">![Cross Orthodox](assets/img/000.png)</span>
 
 <span style="color: #2C87BF;">Во Имя Отца§ и Сы§на и Свята§го Ду§ха. Ами§нь.</span>
 <br>
