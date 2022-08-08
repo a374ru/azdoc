@@ -1,5 +1,5 @@
 /*  Во имя Отца и Сына и Святаго Духа. Аминь. */
-/* суббота, 30 июля 2022 г. v2  */
+/* среда,  3 августа 2022 v2  */
 :root {
 	--kino-var: #e34234;
 	--sizeDate-var: 1.1em;
@@ -63,7 +63,9 @@ body {
 	display: flex;
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0;
+	width: 101%;
+	margin-left: -5px;
+	top: -4px;
 	/* font-size: 1.4vw; */
 	background: linear-gradient(0deg, darkgoldenrod -10%, #fffaf5 12%);
 	border-radius: 0px 0px 10px 10px;
@@ -81,7 +83,7 @@ img#search-target-img {
 
 .navi-item {
 	float: left;
-	background: #dad2;
+	background: #ececec;
 	padding: 0.3em;
 	margin: 0em 0em -0.3em 0.3em;
 	border-radius: 0.2em;
@@ -111,9 +113,9 @@ nav {
 pre {
 	overflow: auto;
 	padding: 0.5rem 1rem 1rem 1rem;
-	background-color: #fffef8;
-	font-size: 1.3em;
-	box-shadow: 0px 0px 33px #ffffff;
+	background-color: #d2d2d229;
+	font-size: 1.1em;
+	/* box-shadow: 0px 0px 33px #ffffff; */
 }
 
 code {
@@ -213,6 +215,7 @@ img {
 	/* margin-left: auto;
   margin-right: auto; */
 	transform: rotate(-2deg);
+	filter: drop-shadow(0px 22px 10px #ccc5);
 	cursor: pointer;
 }
 
@@ -426,7 +429,7 @@ table.gsc-search-box {
 	0% {
 		transform: translateY(0) rotate(0deg);
 		opacity: 1;
-		border-radius: 0;
+		border-radius: 33;
 		/* 		background-color: #ccc; */
 	}
 	100% {
@@ -454,7 +457,7 @@ table.gsc-search-box {
 	list-style: none;
 	width: 20px;
 	height: 20px;
-	background: #fff3e4;
+	background: #fff3e433;
 	animation: animate 19s linear infinite;
 }
 
@@ -462,69 +465,69 @@ table.gsc-search-box {
 	left: 76%;
 	width: 125px;
 	height: 125px;
-	bottom: -125px;
+	bottom: -185px;
 	animation-delay: 1s;
 }
 .background li:nth-child(1) {
 	left: 59%;
-	width: 124px;
+	width: 184px;
 	height: 124px;
-	bottom: -124px;
+	bottom: -184px;
 	animation-delay: 3s;
 }
 .background li:nth-child(2) {
 	left: 18%;
 	width: 105px;
 	height: 105px;
-	bottom: -105px;
+	bottom: -165px;
 	animation-delay: 8s;
 }
 .background li:nth-child(3) {
 	left: 46%;
 	width: 119px;
-	height: 119px;
-	bottom: -119px;
+	height: 169px;
+	bottom: -199px;
 	animation-delay: 4s;
 }
 .background li:nth-child(4) {
 	left: 48%;
 	width: 101px;
 	height: 101px;
-	bottom: -101px;
+	bottom: -161px;
 	animation-delay: 18s;
 }
 .background li:nth-child(5) {
 	left: 36%;
 	width: 137px;
 	height: 137px;
-	bottom: -137px;
+	bottom: -197px;
 	animation-delay: 20s;
 }
 .background li:nth-child(6) {
 	left: 4%;
 	width: 100px;
 	height: 100px;
-	bottom: -100px;
+	bottom: -160px;
 	animation-delay: 21s;
 }
 .background li:nth-child(7) {
 	left: 16%;
 	width: 133px;
 	height: 133px;
-	bottom: -133px;
+	bottom: -193px;
 	animation-delay: 13s;
 }
 .background li:nth-child(8) {
 	left: 23%;
 	width: 107px;
 	height: 107px;
-	bottom: -107px;
+	bottom: -167px;
 	animation-delay: 27s;
 }
 .background li:nth-child(9) {
 	left: 42%;
 	width: 154px;
 	height: 154px;
-	bottom: -154px;
+	bottom: -194px;
 	animation-delay: 34s;
 }
