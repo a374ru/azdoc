@@ -1,5 +1,8 @@
 /*  Во имя Отца и Сына и Святаго Духа. Аминь. */
 /* среда,  3 августа 2022 v2  */
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone";
+
 #cross-orthodox img{
 	width: 12vw;
 	transform: rotate(0deg);
