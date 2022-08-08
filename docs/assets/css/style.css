@@ -1,5 +1,12 @@
 /*  Во имя Отца и Сына и Святаго Духа. Аминь. */
 /* среда,  3 августа 2022 v2  */
+#cross-orthodox img{
+	width: 12vw;
+	transform: rotate(0deg);
+	transition: 1s;
+	align-items: stretch;
+}
+
 :root {
 	--kino-var: #e34234;
 	--sizeDate-var: 1.1em;
