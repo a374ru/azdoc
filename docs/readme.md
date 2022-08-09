@@ -48,9 +48,9 @@ pageDict = {
 ## Таблицы
 
 	| title | title | title |
-	|:---:  | :---: | :---: |
-	| text | text | text  |
-	| text | text | text  |
+	| :---: | :---: | :---: |
+	| text  | text  | text  |
+	| text  | text  | text  |
 
 ## Картинки
 
