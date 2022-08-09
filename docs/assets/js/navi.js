@@ -17,14 +17,29 @@ pageDict = {
 
 // ========== to local Storage ======================
 
-// localStorage.clear();
+// Зачистка хранилища клавишей `ESCAPE`
+document.addEventListener('keyup', function (event) {
+	if (event.key) {
+		alert("ВЫ ПОЧИСТИЛИ ЛОКАЛЬНЫЕ ДАННЫЕ ЭТОГО РЕСУРСА. ЭТО НОРМАЛЬНО!");
+		localStorage.clear();
+	}
+});
 
-function clickColor() {
+// Проверка и установка стартового значения
+if (localStorage.getItem("az") != 1) {
+
+	localStorage.setItem("color", '#fffaf5');
+}
+
+
+
+function switchColorScheme() {
+
 
 	whiteBG = '#fffaf5';
 	darkBG = '#110000';
-	naviLight = 'box-shadow: 0px 10 22 #fffaf5; background:linear-gradient(180deg, #fffaf5 0%, ##A78F5B 3%)';
-	naviDark = 'box-shadow: 0px 20px 52px #611816; background:linear-gradient(180deg, #180000 97%, red 1%)';
+	naviLight = `box-shadow: 0px 10 22 #fffaf5; background:linear-gradient(180deg, ${whiteBG} 0%, ##A78F5B 3%)`;
+	naviDark = `box-shadow: 0px 20px 52px #611816; background:linear-gradient(180deg, ${darkBG} 97%, red 1%)`;
 
 	trgr = localStorage.getItem('color') == whiteBG ? true : false;
 
@@ -45,10 +60,7 @@ function clickColor() {
 		localStorage.setItem('color', darkBG);
 		localStorage.setItem('navidark', naviDark);
 
-
-
 	}
-
 
 	document.body.style.background = localStorage.getItem('color');
 	document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidark');
