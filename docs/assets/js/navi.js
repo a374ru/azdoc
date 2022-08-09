@@ -131,7 +131,7 @@ function toNavi() {
 				var element = pageDict[key];
 
 			} else if (pageDict[key].split(' ').length > 1) {
-				var element = pageDict[key].slice(0, 7);
+				var element = pageDict[key].slice(0, 7) + "…";
 
 			}
 
