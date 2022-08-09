@@ -19,7 +19,7 @@ pageDict = {
 
 // Зачистка хранилища клавишей `ESCAPE`
 document.addEventListener('keyup', function (event) {
-	if (event.key) {
+	if (event.key === 'Escape') {
 		alert("ВЫ ПОЧИСТИЛИ ЛОКАЛЬНЫЕ ДАННЫЕ ЭТОГО РЕСУРСА. ЭТО НОРМАЛЬНО!");
 		localStorage.clear();
 	}
