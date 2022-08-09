@@ -3,13 +3,6 @@
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone";
 
-#cross-orthodox img{
-	width: 12vw;
-	transform: rotate(0deg);
-	transition: 1s;
-	align-items: stretch;
-}
-
 :root {
 	--kino-var: #e34234;
 	--sizeDate-var: 1.1em;
@@ -44,14 +37,15 @@ blockquote {
 	border-right: 0.1999999999999993em solid #e9e2da;
 	padding: 0em 1em 0em 3em;
 	border-radius: 20%;
-	background: #fff;
+	background: #fcf9ffcc;
+	margin-bottom: 2em;
 }
 
 body {
 	font-family: "Fontics";
 	margin: 3em;
-	padding-bottom: 133px;
-	background: rgb(255, 250, 245);
+	padding-bottom: 12px;
+	background: #fffaf5;
 	color: #775738;
 	font-size: 27px;
 
@@ -122,14 +116,13 @@ nav {
 
 pre {
 	overflow: auto;
-	padding: 0.5rem 1rem 1rem 1rem;
+	padding: 0.5rem 1rem 0.5rem 2rem;
 	background-color: #d2d2d229;
 	font-size: 1.1em;
-	/* box-shadow: 0px 0px 33px #ffffff; */
 }
 
 code {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	color: #96719c;
 	overflow-wrap: break-word;
 }
@@ -140,16 +133,29 @@ strong {
 
 table {
 	overflow: auto;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	color: #99769c;
 	padding: 1.5%;
-	transform: rotate(-0.5deg);
+	transform: rotate(0deg);
 	box-shadow: 0px 0px 12px #00000022;
+	margin-bottom: 2em;
 	/* border-radius: 0.3em; */
 	/* background: #fffff0;
 	border-left: 22px solid #fff;
 	border-right: 22px solid #fff; */
-	font-family: monospace;
+	/* font-family: monospace; */
+}
+td {
+	padding: 1rem 1rem;
+}
+
+td:nth-child(2n-1) {
+	/* color:red; */
+	padding: 1rem 4rem;
+}
+td > code {
+	color: #575757;
+	padding: 0.5rem;
 }
 
 thead {
@@ -283,9 +289,18 @@ table.gsc-search-box {
 .gs-visibleUrl-breadcrumb {
 	font-size: 13px;
 }
+
+#gs_tti50 {
+	padding: 12px;
+}
+.gsc-search-button {
+	padding: 0px;
+}
+
 .gsc-input {
 	/* font-size: 16px !important; */
 	transform: rotate(0deg) !important;
+	margin-bottom: 0;
 }
 .gsc-search-button-v2 {
 	font-size: 0px;
@@ -404,10 +419,6 @@ table.gsc-search-box {
 		order: -1;
 	}
 
-	.navi-item:hover {
-		border-radius: 0em;
-	}
-
 	.navi-item {
 		font-size: 1.2rem;
 		float: left;
@@ -425,11 +436,34 @@ table.gsc-search-box {
 	ul {
 		padding-inline-start: 19px;
 	}
+
+	td:nth-child(2n-1) {
+		/* color:red; */
+		padding: 0.1em 0.1em;
+	}
+	td > code {
+		color: #575757;
+		padding: 0.1rem;
+	}
 }
 
 @media (max-width: 1024px) {
 	.markdown-body {
 		width: 97%;
+	}
+
+	blockquote {
+		margin-right: 2px;
+		margin-left: 2px;
+		border-left: 1em solid #e9e2da;
+		border-right: 0.2em solid #e9e2da;
+		padding: 0em 1.5em 0em 1.5em;
+		border-radius: 15%;
+		background-color: #fffdfa;
+	}
+
+	table.gsc-search-box td.gsc-input {
+		padding-left: 0.7em;
 	}
 }
 
