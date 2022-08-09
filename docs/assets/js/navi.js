@@ -135,9 +135,9 @@ function toNavi() {
 
 			}
 
-			if (element.length > 8 || element.split(' ').length > 1) {
-				element = element.slice(0, element.length) + "…";
-			}
+			// if (element.length > 8 || element.split(' ').length > 1) {
+			// 	element = element.slice(0, element.length) + "…";
+			// }
 
 			htmlString += `<div class="navi-item"><a title="${pageDict[key]}" href="${key}">${element}</a> </div>`;
 			counter += 1;
