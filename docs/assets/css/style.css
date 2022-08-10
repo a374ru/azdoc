@@ -3,6 +3,8 @@
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone";
 
+
+
 :root {
 	--kino-var: #e34234;
 	--sizeDate-var: 1.1em;
@@ -83,6 +85,11 @@ body {
 img#search-target-img {
 	width: 1.2em;
 	transform: rotate(0deg);
+}
+
+#navi-page{
+	margin: 0 4vw;
+
 }
 
 .navi-item {
@@ -317,16 +324,7 @@ table.gsc-search-box {
 	vertical-align: middle;
 	border-radius: 7px;
 }
-.gs-webResult::before {
-	background: black;
-	border: .5em solid  red;
-/* 	border-radius: 55%; */
-	content:" ";
-	float: left;
-/* 	heigth: 33px; */
-	padding: 1%;
-	
-}
+
 
 .gs-webResult{
 /* 	border-left: 44px solid  red; */
