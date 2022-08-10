@@ -271,10 +271,18 @@ li {
 }
 
 /* sesarch GOOGLE */
+
+.gs-spelling.gs-result{
+	font-size: 1.3rem;
+}
+
+
+
 .gsc-control-cse {
 	background-color: #ffffff00;
 	border: 1px solid #fff;
 	transform: rotate(0deg) !important;
+	font-size: 1.7rem;
 }
 .gsc-above-wrapper-area-container {
 	/* width: 90% !important; */
@@ -309,8 +317,21 @@ table.gsc-search-box {
 	vertical-align: middle;
 	border-radius: 7px;
 }
-.gs-webResult {
-	font-size: 3em !important;
+.gs-webResult::before {
+	background: black;
+	border: .5em solid  red;
+/* 	border-radius: 55%; */
+	content:" ";
+	float: left;
+/* 	heigth: 33px; */
+	padding: 1%;
+	
+}
+
+.gs-webResult{
+/* 	border-left: 44px solid  red; */
+	font-size: 2.3em !important;
+	
 }
 /*  end serch GOOGLE */
 
