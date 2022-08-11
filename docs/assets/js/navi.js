@@ -28,7 +28,7 @@ document.addEventListener('keyup', function (event) {
 // Проверка и установка стартового значения
 if (localStorage.getItem("az") != 1) {
 
-	localStorage.setItem("color", '#fffbf6');
+	localStorage.setItem("color", '#fff');
 }
 
 
@@ -36,9 +36,9 @@ if (localStorage.getItem("az") != 1) {
 function switchColorScheme() {
 
 
-	whiteBG = '#fffbf6';
+	whiteBG = '#fff';
 	darkBG = '#110000';
-	naviLight = `box-shadow: 0px 10 22 #fffbf6; background:linear-gradient(180deg, ${whiteBG} 0%, ##A78F5B 3%)`;
+	naviLight = `box-shadow: 0px 10 22 #fff; background:linear-gradient(180deg, ${whiteBG} 91%, #A78F5B 5%)`;
 	naviDark = `box-shadow: 0px 20px 52px #611816; background:linear-gradient(180deg, ${darkBG} 97%, red 1%)`;
 
 	trgr = localStorage.getItem('color') == whiteBG ? true : false;
