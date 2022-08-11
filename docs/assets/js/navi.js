@@ -7,10 +7,10 @@
  */
 pageDict = {
 
+	// "404": "Страница не найдена",
 	"az": "Азъ",
 	"about": "О проекте",
 	"contacts": "Контакты",
-	// "description": "Описание",
 	"navi-page": "Оглавление и поиск"
 
 }
@@ -64,6 +64,7 @@ function switchColorScheme() {
 
 	document.body.style.background = localStorage.getItem('color');
 	document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidark');
+
 
 }
 // =================end localStorage =============
