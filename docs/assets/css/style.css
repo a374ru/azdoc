@@ -70,7 +70,7 @@ body {
 	margin-left: -5px;
 	top: -4px;
 	/* font-size: 1.4vw; */
-	background: linear-gradient(0deg, #b8860a 90%, #fffbf6 93%);
+	background: linear-gradient(0deg, #b8860a 1%, #fffbf6 7%);
 	border-radius: 0px 0px 10px 10px;
 	justify-content: space-around;
 	align-content: center;

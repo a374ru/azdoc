@@ -75,7 +75,7 @@ document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidar
 
 
 
-folderProjectOfGitHub = document.location.pathname.split('/')[1];
+folderProjectOfGitHub = "/" + document.location.pathname.split('/')[1];
 
 
 // словарь ключей для рандом-сортировки
