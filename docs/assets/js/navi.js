@@ -74,8 +74,13 @@ document.body.style.background = localStorage.getItem('color');
 document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidark');
 
 
-
-folderProjectOfGitHub = "/" + document.location.pathname.split('/')[1];
+/** 
+ * Для домена третьего уровня на хостинге `github-pages`.
+ * Для доменов второго уровня смените 1 на 0.
+ * 
+*/
+tempVar = document.location.pathname.split('/')[1];
+folderProjectOfGitHub = tempVar === '/' ? '' : `/${tempVar}`;
 
 
 // словарь ключей для рандом-сортировки
