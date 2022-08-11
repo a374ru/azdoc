@@ -74,6 +74,10 @@ document.body.style.background = localStorage.getItem('color');
 document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidark');
 
 
+
+folderProjectOfGitHub = document.location.pathname.split('/')[1];
+
+
 // словарь ключей для рандом-сортировки
 keyPageDict = [];
 for (const key in pageDict) {
@@ -152,7 +156,7 @@ function toNavi() {
 			// 	element = element.slice(0, element.length) + "…";
 			// }
 
-			htmlString += `<div class="navi-item"><a title="${pageDict[key]}" href="${key}">${element}</a> </div>`;
+			htmlString += `<div class="navi-item"><a title="${pageDict[key]}" href="${folderProjectOfGitHub}/${key}">${element}</a> </div>`;
 			counter += 1;
 
 		}
@@ -163,8 +167,7 @@ function toNavi() {
 	}
 
 	cday = new Date().getDate();
-
-	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="navi-page#navi">√</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
+	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="${folderProjectOfGitHub}/dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}/navi-page#navi">√</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
 <span class="material-icons-two-tone">
 light_mode
 </span></a></div>`

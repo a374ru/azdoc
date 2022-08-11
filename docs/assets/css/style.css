@@ -50,9 +50,9 @@ body {
 	color: #775738;
 	font-size: 27px;
 	/* Created with https://www.css-gradient.com */
-	background: -webkit-linear-gradient(top, #fffbf6, #fff9ec);
+	/* background: -webkit-linear-gradient(top, #fffbf6, #fff9ec);
 	background: -moz-linear-gradient(top, #fffbf6, #fff9ec);
-	background: linear-gradient(to bottom, #fffbf6, #fff9ec);
+	background: linear-gradient(to bottom, #fffbf6, #fff9ec); */
 }
 
 .markdown-body {
