@@ -103,7 +103,7 @@ itemsNavi = 10;
 
 function namePage() {
 
-	stringTabTitle = 'a374.ru';
+	stringTabTitle = 'AZDOC YS©TM';
 	str = document.URL.split('/').pop().split('.')[0];
 	if (str != "") {
 
