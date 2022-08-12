@@ -33,6 +33,7 @@ if (localStorage.getItem("az") != 1) {
 
 
 
+
 function switchColorScheme() {
 
 	whiteBG = '#fffbf6';
@@ -100,7 +101,7 @@ keyDay = "";
 /**
  * Количество елементов в меню навигации.
  */
-itemsNavi = 10;
+itemsNavi = 7;
 
 /**
  * Функция разбирает  URL текущей страницы
@@ -142,7 +143,7 @@ function namePage() {
 function toNavi() {
 
 	counter = 1;
-	htmlString = "";
+	htmlString = `<div class="navi-item" title="Главная страница" id="navi-icon-home"><a onclick="switchColorScheme()"><span class="material-icons-two-tone">home</span></a></div>`;
 
 	for (const key of keyPageDict) {
 

@@ -250,7 +250,11 @@ li {
 	padding: 1px 22px 0.7em 0px;
 }
 
-#day {
+#navi-icon-home{
+	font-weight: 600;
+}
+
+#navi-day {
 	transform: rotate(0deg);
 	background: #fff;
 }
