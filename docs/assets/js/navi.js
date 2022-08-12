@@ -172,7 +172,9 @@ function toNavi() {
 	}
 
 	cday = new Date().getDate();
-	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="${folderProjectOfGitHub}/dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}/navi-page#navi">√</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
+	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="${folderProjectOfGitHub}/dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}/navi-page#navi"><span class="material-icons-two-tone">manage_search</span>
+
+	</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
 <span class="material-icons-two-tone">
 light_mode
 </span></a></div>`
