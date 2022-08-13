@@ -33,11 +33,12 @@ if (localStorage.getItem("az") != 1) {
 
 
 
+
 function switchColorScheme() {
 
-	whiteBG = '#fff';
+	whiteBG = '#fffbf6';
 	darkBG = '#110000';
-	naviLight = `box-shadow: 0px 10 22 #fff; background:linear-gradient(180deg, ${whiteBG} 97%, #8d6e63 1%)`;
+	naviLight = `box-shadow: 0px 10 22 #fff; background:linear-gradient(180deg, ${whiteBG} 93%, #8d6e63 1%)`;
 	naviDark = `box-shadow: 0px 20px 52px #611816; background:linear-gradient(180deg, ${darkBG} 97%, red 1%)`;
 
 	trgr = localStorage.getItem('color') == whiteBG ? true : false;
@@ -100,7 +101,7 @@ keyDay = "";
 /**
  * Количество елементов в меню навигации.
  */
-itemsNavi = 10;
+itemsNavi = 7;
 
 /**
  * Функция разбирает  URL текущей страницы
@@ -142,7 +143,7 @@ function namePage() {
 function toNavi() {
 
 	counter = 1;
-	htmlString = "";
+	htmlString = `<div class="navi-item" title="Главная страница" id="navi-icon-home"><a href="${folderProjectOfGitHub}"><span class="material-icons-two-tone">home</span></a></div>`;
 
 	for (const key of keyPageDict) {
 
@@ -171,7 +172,9 @@ function toNavi() {
 	}
 
 	cday = new Date().getDate();
-	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="${folderProjectOfGitHub}/dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}/navi-page#navi">√</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
+	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="${folderProjectOfGitHub}/dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}/navi-page#navi"><span class="material-icons-two-tone">manage_search</span>
+
+	</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
 <span class="material-icons-two-tone">
 light_mode
 </span></a></div>`
