@@ -1,5 +1,5 @@
-/*  Во имя Отца и Сына и Святаго Духа. Аминь. */
-/* среда,  3 августа 2022 v2  */
+ /* Во имя Отца и Сына и Святаго Духа. Аминь. */
+ /* среда,  24 августа 2023 v3  */
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone";
 
@@ -113,9 +113,13 @@ img#search-target-img {
 	transform: rotate(9deg);
 }
 
+.navi-hidden {
+	visibility: hidden;
+}
 nav {
 	/* 	height: 1.7em; */
 	padding: 15px 2px 22px 0px;
+	transition: .5s;
 }
 
 pre {
