@@ -3,8 +3,6 @@
 
 @import "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone";
 
-
-
 :root {
 	--kino-var: #e34234;
 	--sizeDate-var: 1.1em;
@@ -114,12 +112,15 @@ img#search-target-img {
 }
 
 .navi-hidden {
-	visibility: hidden;
+	top: -200px;
+		display: none;
+		transition: .5s;
 }
+
 nav {
 	/* 	height: 1.7em; */
 	padding: 15px 2px 22px 0px;
-	transition: .5s;
+	transition: .7s;
 }
 
 pre {
