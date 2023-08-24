@@ -239,7 +239,7 @@ function naviPage() {
 
 			list += `
 		
-		<span class="navi-item" style="background: #fef4e8; padding: 0em 1em;margin: 1em 1em 0em 0em; line-height: 2"><a href="${ii}"> ${pageDict[ii]} </a></span>
+		<a href="${ii}"><span class="navi-item" style="background: #fef4e8; padding: 0em 1em;margin: 1em 1em 0em 0em; line-height: 2"> ${pageDict[ii]} </span></a>
 
 		`
 		}
@@ -251,3 +251,19 @@ function naviPage() {
 if (keyDay == navi_page) {
 	naviPage()
 }
+
+// ------ Скрытие меню ------
+var startScroll = 0;
+window.addEventListener('scroll', function () {
+	let currentPosition = this.scrollY;
+	if (currentPosition > startScroll && currentPosition > 444) {
+		document.querySelector('.navi').classList.add("navi-hidden");
+		console.log();
+	}
+	else {
+		document.querySelector('.navi').classList.remove("navi-hidden");
+	}
+	startScroll = currentPosition;
+
+});
+// ------end: Скрытие меню ------
