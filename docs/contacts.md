@@ -1,3 +1,7 @@
+---
+title: "Контакты мои…"
+---
+
 <div class="navi"><nav id="navi"><!-- js --></nav></div>
 
 # Контакты
@@ -13,7 +17,7 @@
 
 ||||
 |:---|:---:|---:|
-[<<<](about.md)|[вверх](#)|[>>>](readme.md)
+[🔙](readme.md)|[ 🔝 ](#)|[🔜](about.md)
 
 <span id="az2-img-2" class="img" onclick="imgResize()">![img](assets/svg/000-end.svg)</span>
 

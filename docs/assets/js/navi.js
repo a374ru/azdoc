@@ -1,5 +1,5 @@
 // Скрипт ведения простой документации на JS/CSS/HTML
-// четверг, 24 августа 2023 г.
+// date: 8 августа 2022 г.
 /**
  *  Словарь доступных страниц ссылок.
  * Добавили страницу – добавили строку в словарь.
@@ -12,15 +12,12 @@ pageDict = {
 	"about": "О проекте",
 	"contacts": "Контакты",
 	"navi-page": "Оглавление и поиск"
-
 }
 
-// ========== to local Storage ======================
-
-// Зачистка хранилища клавишей `esc`
+// Зачистка хранилища клавишей `ESC`
 document.addEventListener('keyup', function (event) {
 	if (event.key === 'Escape') {
-		alert("ВЫ ПОЧИСТИЛИ ЛОКАЛЬНЫЕ ДАННЫЕ ЭТОГО РЕСУРСА. ЭТО НОРМАЛЬНО!");
+		alert("ВЫ ПОЧИСТИЛИ ЛОКАЛЬНЫЕ ДАННЫЕ ЭТОГО РЕСУРСА.\nЭТО ПОЛЕЗНО!");
 		localStorage.clear();
 	}
 });
@@ -28,18 +25,16 @@ document.addEventListener('keyup', function (event) {
 // Проверка и установка стартового значения
 if (localStorage.getItem("az") != 1) {
 
-	localStorage.setItem("color", '#fff');
+	localStorage.setItem("color", '#ffffff');
 }
-
-
 
 
 function switchColorScheme() {
 
-	whiteBG = '#fffbf6';
-	darkBG = '#110000';
-	naviLight = `box-shadow: 0px 10 22 #fff; background:linear-gradient(180deg, ${whiteBG} 93%, #8d6e63 1%)`;
-	naviDark = `box-shadow: 0px 20px 52px #611816; background:linear-gradient(180deg, ${darkBG} 97%, red 1%)`;
+	whiteBG = '#ffffff';
+	darkBG = '#070000';
+	naviLight = `box-shadow: 0px 10 22 #fffaf5; background:linear-gradient(180deg, ${whiteBG} 98%, #b36c71 1%)`;
+	naviDark = `box-shadow: 0px 20px 52px #611816; background:linear-gradient(180deg, ${darkBG} 98%, red 1%)`;
 
 	trgr = localStorage.getItem('color') == whiteBG ? true : false;
 
@@ -50,7 +45,6 @@ function switchColorScheme() {
 	localStorage.setItem(
 		'az', 1
 	)
-
 
 	if (!trgr) {
 		localStorage.setItem('color', whiteBG);
@@ -65,7 +59,6 @@ function switchColorScheme() {
 	document.body.style.background = localStorage.getItem('color');
 	document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidark');
 
-
 }
 // =================end localStorage =============
 
@@ -74,16 +67,33 @@ document.body.style.background = localStorage.getItem('color');
 document.getElementsByClassName('navi')[0].style = localStorage.getItem('navidark');
 
 
-/** 
- * Для домена третьего уровня на хостинге `github-pages`.
- * Для доменов второго уровня смените 1 на 0.
- * 
+
+/** Переключатель доменного имени. 
+	Корректировка ссылок с учетом доменного имени. 
 */
-tempVar = document.location.pathname.split('/')[1];
-folderProjectOfGitHub = tempVar === '/' ? '' : `/${tempVar}`;
+var tempVar = document.location.host.split('/')
+var domain = document.location.host.split('.').length;
+var folderProjectOfGitHub = "???";
+
+switch (domain) {
+	case 2:
+		// код для ЛИЧНОГО поддомена второго уровня
+		folderProjectOfGitHub = `/${tempVar[0]}`;
+		break;
+	case 3:
+		// код для ЛИЧНОГО поддомена 3-го уровня
+		folderProjectOfGitHub = "";
+
+		break;
+
+	default:
+		// домен третьего уровня по умолчанию yuorename.github.io
+		folderProjectOfGitHub = `/${tempVar[0]}/`;
+		break;
+}
 
 
-// словарь ключей для рандом-сортировки
+// словарь ключей для рандомной-сортировки
 keyPageDict = [];
 for (const key in pageDict) {
 	keyPageDict.push(key);
@@ -112,7 +122,7 @@ itemsNavi = 7;
 
 function namePage() {
 
-	stringTabTitle = 'AZDOC YS©TM';
+	stringTabTitle = 'ДОК-РЕПО А374';
 	str = document.URL.split('/').pop().split('.')[0];
 	if (str != "") {
 
@@ -136,32 +146,32 @@ function namePage() {
 }
 
 /**
- * Функция составляет меню из словаря
+ * Функция составляет навигацию липкого-бара из станиц словаря
  * 
  * @returns HTML строку
  */
 function toNavi() {
 
 	counter = 1;
-	htmlString = `<div class="navi-item" title="Главная страница" id="navi-icon-home"><a href="${folderProjectOfGitHub}"><span class="material-icons-two-tone">home</span></a></div>`;
+	htmlString = '<div class="navi-item" id="navi-icon-home"><a href="/#navi"><span class="icons">🏠</span></a></div>';
 
 	for (const key of keyPageDict) {
 
-		if (key != keyDay && counter < itemsNavi && key != 'dobro-day' && key != 'search-result') {
+		if (key != keyDay && counter < itemsNavi && key != 'dobro-day' && key != '404' && key != 'search-result') {
 
 			if (!pageDict[key].split(' ')[1]) {
 				var element = pageDict[key];
 
 			} else if (pageDict[key].split(' ').length > 1) {
-				var element = pageDict[key].slice(0, 7) + "…";
+				var element = pageDict[key].slice(0, 7);
 
 			}
 
-			// if (element.length > 8 || element.split(' ').length > 1) {
-			// 	element = element.slice(0, element.length) + "…";
-			// }
+			if (element.length > 8 || element.split(' ').length > 1) {
+				element = element.slice(0, element.length - 3) + "…";
+			}
 
-			htmlString += `<div class="navi-item"><a title="${pageDict[key]}" href="${folderProjectOfGitHub}/${key}">${element}</a> </div>`;
+			htmlString += `<div class="navi-item"><a title="${pageDict[key]}" href="/${folderProjectOfGitHub}${key}#navi">${element}</a></div>`;
 			counter += 1;
 
 		}
@@ -172,12 +182,8 @@ function toNavi() {
 	}
 
 	cday = new Date().getDate();
-	htmlString += `<div class="navi-item" id="day"><a href="https://a374ru.github.io/aprakos.ru/"><span id="${folderProjectOfGitHub}/dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}/navi-page#navi"><span class="material-icons-two-tone">manage_search</span>
 
-	</a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()">
-<span class="material-icons-two-tone">
-light_mode
-</span></a></div>`
+	htmlString += `<div class="navi-item" id="navi-day"><a href="dobro-day"><span id="navi-dobro-day">День </span></a><a href="https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/index.html"><span class="${folderProjectOfGitHub}number-day" id="number-day">${cday}</span></a></div><div class="navi-item" title="ПОИСК И НАВИГАЦИЯ" id="navi-page-search"><a href="${folderProjectOfGitHub}navi-page#navi"><span class="icons">🔍</span></a></div><div class="navi-item" title="Цветность" id="colorScheme"><a onclick="switchColorScheme()"><span class="icons">🔘</span></a></div>`
 	return htmlString;
 
 }
@@ -192,8 +198,8 @@ navi();
 
 /** Увеличивает картинку по клику по заданным параметрам.
  * 
- * @param {*} rsz увеличение размера картинки при клике
- * @param {*} speed animation 
+ * @param {int} rsz увеличение размера картинки при клике
+ * @param {int} speed animation 
  */
 function rsz(rsz = 100, speed = 0.1) {
 
@@ -226,6 +232,7 @@ function imgResize(par, speed) {
 
 }
 
+
 /**
  * Генерирует список  ссылок на страницы и добавляет их на указанную страницу навигации
  * по `id="navi-page"`
@@ -239,7 +246,7 @@ function naviPage() {
 
 			list += `
 		
-		<a href="${ii}"><span class="navi-item" style="background: #fef4e8; padding: 0em 1em;margin: 1em 1em 0em 0em; line-height: 2"> ${pageDict[ii]} </span></a>
+		<span class="navi-item" style="background: #fef4e8; padding: 0em 1em;margin: 1em 1em 0em 0em; line-height: 2"><a href="${ii}"> ${pageDict[ii]} </a></span>
 
 		`
 		}
@@ -251,6 +258,25 @@ function naviPage() {
 if (keyDay == navi_page) {
 	naviPage()
 }
+
+
+// ----- kern()----
+
+function kern() {
+
+	rrr = document.getElementById('kern').style.fontKerning;
+	// color = document.getElementById('kern').style.color;
+
+	if (rrr === 'none') {
+		document.getElementById('kern').style.fontKerning = "normal";
+		document.getElementById('kern').style.color = "#777";
+	} else {
+		document.getElementById('kern').style.fontKerning = "none";
+		document.getElementById('kern').style.color = "#99769c";
+	}
+}
+
+// ---------end: kern()-----
 
 // ------ Скрытие меню ------
 var startScroll = 0;

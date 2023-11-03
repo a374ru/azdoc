@@ -1,11 +1,9 @@
-/**
-* Во имя Отца и Сына и Святаго Духа. Аминь.
-*
-* @format
-*/
+/*  Во имя Отца и Сына и Святаго Духа. Аминь. */
+/* среда,  3 августа 2022 v2  */
 
-/* среда,  24 августа 2023 v2  */
 @import "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone";
+
+
 
 :root {
 	--kino-var: #e34234;
@@ -52,9 +50,9 @@ body {
 	color: #775738;
 	font-size: 27px;
 	/* Created with https://www.css-gradient.com */
-	/* background: -webkit-linear-gradient(top, #fffbf6, #fff9ec); */
-	/* background: -moz-linear-gradient(top, #fffbf6, #fff9ec); */
-	/* background: linear-gradient(to bottom, #fffbf6, #fff9ec); */
+	/* background: -webkit-linear-gradient(top, #fffbf6, #fff9ec);
+	background: -moz-linear-gradient(top, #fffbf6, #fff9ec);
+	background: linear-gradient(to bottom, #fffbf6, #fff9ec); */
 }
 
 .markdown-body {
@@ -86,8 +84,9 @@ img#search-target-img {
 	transform: rotate(0deg);
 }
 
-#navi-page {
+#navi-page{
 	margin: 0 4vw;
+
 }
 
 .navi-item {
@@ -112,11 +111,6 @@ img#search-target-img {
 	color: #fff;
 	/* border-radius: 0.3em; */
 	transform: rotate(9deg);
-}
-
-.navi-hidden {
-	transform: translateY(-110%);
-	transition: 1s;
 }
 
 nav {
@@ -147,15 +141,13 @@ table {
 	color: #99769c;
 	padding: 1.5%;
 	transform: rotate(0deg);
-	box-shadow: 0px 0px 12px #00000022;
 	margin-bottom: 2em;
 	/* border-radius: 0.3em; */
 	/* background: #fffff0;
-border-left: 22px solid #fff;
-border-right: 22px solid #fff; */
+	border-left: 22px solid #fff;
+	border-right: 22px solid #fff; */
 	/* font-family: monospace; */
 }
-
 td {
 	padding: 1rem 1rem;
 }
@@ -164,7 +156,6 @@ td:nth-child(2n-1) {
 	/* color:red; */
 	padding: 1rem 4rem;
 }
-
 td > code {
 	color: #575757;
 	padding: 0.5rem;
@@ -241,7 +232,7 @@ img {
 	height: auto;
 	display: block;
 	/* margin-left: auto;
-margin-right: auto; */
+  margin-right: auto; */
 	transform: rotate(-2deg);
 	filter: drop-shadow(0px 22px 10px #ccc5);
 	cursor: pointer;
@@ -258,9 +249,9 @@ li {
 	padding: 1px 22px 0.7em 0px;
 }
 
-#navi-icon-home {
+#navi-icon-home{
 	font-weight: 600;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 #navi-day {
@@ -269,14 +260,13 @@ li {
 }
 
 /* #dobro-day {
-display: absolute;
-background: #f8ffd9;
-transform: rotate(10deg);
-margin-right: 1em;
-padding-right: 1em;
-}
+	display: absolute;
+		background: #f8ffd9;
+		transform: rotate(10deg);
+		margin-right: 1em;
+		padding-right: 1em;
+} */
 
-*/
 #number-day {
 	/* 	transform: rotate(0deg); */
 	/* 	margin-left: 22px; */
@@ -284,14 +274,17 @@ padding-right: 1em;
 	/* 	background: #eee4f3; */
 	/* 	border-radius: 0px 2px 2px 0px; */
 	/* color:
-red; */
+  red; */
 	/* 	box-shadow: none; */
 }
 
 /* sesarch GOOGLE */
-.gs-spelling.gs-result {
+
+.gs-spelling.gs-result{
 	font-size: 1.3rem;
 }
+
+
 
 .gsc-control-cse {
 	background-color: #ffffff00;
@@ -299,20 +292,16 @@ red; */
 	transform: rotate(0deg) !important;
 	font-size: 1.7rem;
 }
-
 .gsc-above-wrapper-area-container {
 	/* width: 90% !important; */
 	transform: rotate(0deg);
 }
-
 .gs-snippet .gs-title {
-	font-size: 1.5rem !important;
+	font-size: 1.5rem !important ;
 }
-
 table.gsc-search-box {
 	transform: rotate(0deg);
 }
-
 .gs-visibleUrl-breadcrumb {
 	font-size: 13px;
 }
@@ -320,7 +309,6 @@ table.gsc-search-box {
 #gs_tti50 {
 	padding: 12px;
 }
-
 .gsc-search-button {
 	padding: 0px;
 }
@@ -330,7 +318,6 @@ table.gsc-search-box {
 	transform: rotate(0deg) !important;
 	margin-bottom: 0;
 }
-
 .gsc-search-button-v2 {
 	font-size: 0px;
 	padding: 11px 33px;
@@ -339,12 +326,14 @@ table.gsc-search-box {
 	border-radius: 7px;
 }
 
-.gs-webResult {
-	/* 	border-left: 44px solid  red; */
-	font-size: 2.3em !important;
-}
 
+.gs-webResult{
+/* 	border-left: 44px solid  red; */
+	font-size: 2.3em !important;
+	
+}
 /*  end serch GOOGLE */
+
 /* ================= yandex search */
 .ya-site-form__search,
 #ya-site-form0 {
@@ -378,12 +367,13 @@ table.gsc-search-box {
 /* end yandex search */
 
 /* ===============@media====================== */
+
 @media (max-width: 425px) and (orientation: portrait) {
 	.markdown-body {
 		width: 97%;
 	}
 
-	h1:first-child {
+	body h1:first-child {
 		display: none;
 	}
 
@@ -399,7 +389,6 @@ table.gsc-search-box {
 	img {
 		width: 99%;
 	}
-
 	.navi {
 		position: sticky;
 		background: linear-gradient(180deg, #8563 1%, #fffbf6 3%);
@@ -472,7 +461,6 @@ table.gsc-search-box {
 		/* color:red; */
 		padding: 0.1em 0.1em;
 	}
-
 	td > code {
 		color: #575757;
 		padding: 0.1rem;
@@ -500,18 +488,17 @@ table.gsc-search-box {
 }
 
 /* =-=-=-=-=-=-animation  */
+
 @keyframes animate {
 	0% {
 		transform: translateY(0) rotate(0deg);
 		opacity: 1;
 		border-radius: 33;
-		/* 	background-color: #ccc; */
+		/* 		background-color: #ccc; */
 	}
-
 	100% {
 		transform: translateY(-1000px) rotate(720deg);
 		opacity: 0;
-
 		border-radius: 100%;
 	}
 }
@@ -528,7 +515,6 @@ table.gsc-search-box {
 	overflow: hidden;
 	z-index: -1;
 }
-
 .background li {
 	position: absolute;
 	display: block;
@@ -546,7 +532,6 @@ table.gsc-search-box {
 	bottom: -185px;
 	animation-delay: 1s;
 }
-
 .background li:nth-child(1) {
 	left: 59%;
 	width: 184px;
@@ -554,7 +539,6 @@ table.gsc-search-box {
 	bottom: -184px;
 	animation-delay: 3s;
 }
-
 .background li:nth-child(2) {
 	left: 18%;
 	width: 105px;
@@ -562,7 +546,6 @@ table.gsc-search-box {
 	bottom: -165px;
 	animation-delay: 8s;
 }
-
 .background li:nth-child(3) {
 	left: 46%;
 	width: 119px;
@@ -570,7 +553,6 @@ table.gsc-search-box {
 	bottom: -199px;
 	animation-delay: 4s;
 }
-
 .background li:nth-child(4) {
 	left: 48%;
 	width: 101px;
@@ -578,7 +560,6 @@ table.gsc-search-box {
 	bottom: -161px;
 	animation-delay: 18s;
 }
-
 .background li:nth-child(5) {
 	left: 36%;
 	width: 137px;
@@ -586,7 +567,6 @@ table.gsc-search-box {
 	bottom: -197px;
 	animation-delay: 20s;
 }
-
 .background li:nth-child(6) {
 	left: 4%;
 	width: 100px;
@@ -594,7 +574,6 @@ table.gsc-search-box {
 	bottom: -160px;
 	animation-delay: 21s;
 }
-
 .background li:nth-child(7) {
 	left: 16%;
 	width: 133px;
@@ -602,7 +581,6 @@ table.gsc-search-box {
 	bottom: -193px;
 	animation-delay: 13s;
 }
-
 .background li:nth-child(8) {
 	left: 23%;
 	width: 107px;
@@ -610,7 +588,6 @@ table.gsc-search-box {
 	bottom: -167px;
 	animation-delay: 27s;
 }
-
 .background li:nth-child(9) {
 	left: 42%;
 	width: 154px;
